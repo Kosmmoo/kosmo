@@ -75,5 +75,5 @@ Otevři v prohlížeči: `http://localhost:5173`
 ## © Autor
 
 **Jméno:** Vašek Pešek  
-**GitHub:** [https://github.com/uzivatel](https://github.com/uzivatel)  
+**GitHub:** [https://github.com/uzivatel](https://github.com/Kosmmoo)  
 **Email:** vaclav.pesek2@educanet.cz
