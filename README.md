@@ -74,6 +74,6 @@ Otevři v prohlížeči: `http://localhost:5173`
 
 ## © Autor
 
-**Jméno:** _[DOPLŇ SVÉ JMÉNO]_  
+**Jméno:** Vašek Pešek  
 **GitHub:** [https://github.com/uzivatel](https://github.com/uzivatel)  
-**Email:** _[DOPLŇ EMAIL]_
+**Email:** vaclav.pesek2@educanet.cz
