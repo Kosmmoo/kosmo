@@ -1,9 +1,12 @@
-
-
+import style from './HeaderComponent.module.css';
 export const HeaderComponent = () => {
   return (
-    <header>
-      <h1>Kosmo</h1>
+    <header className={style.header}>
+      <ul className={style.list}>
+        <li className={style.listItem}>O mně</li>
+        <li className={style.listItem}>Projekty</li>
+        <li className={style.listItem}>Kontakty</li>
+      </ul>
     </header>
-  )
-}
+  );
+};
