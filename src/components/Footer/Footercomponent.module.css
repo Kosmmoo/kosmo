@@ -1,0 +1,15 @@
+.footer{
+  
+  padding: 20px;
+  text-align: center;
+}
+.container{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.listItem{
+  margin-bottom: 10px;
+}

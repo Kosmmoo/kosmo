@@ -1,24 +1,19 @@
-
 import './App.css';
-import reactLogo from './assets/react.svg';
+import profilovka from './assets/profilovka.png';
+import {BodyComponent} from './components/Body/BodyComponent.tsx';
 import {HeaderComponent} from './components/Header/HeaderComponent';
-import viteLogo from '/vite.svg';
 
 function App() {
   return (
     <>
-      <div>
+      <HeaderComponent />
+      <div className="profilovka-container">
+        <img src={profilovka} className="profilovka" alt="profilovka" />
         <h1>Kosmo</h1>
-        <HeaderComponent />
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
       </div>
+      <BodyComponent />
     </>
   );
 }
 
-export default App
+export default App;
