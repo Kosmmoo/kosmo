@@ -3,7 +3,7 @@ import profilovka from './assets/profilovka.png';
 import {BodyComponent} from './components/Body/BodyComponent.tsx';
 import {HeaderComponent} from './components/Header/HeaderComponent';
 
-function App() {
+export const App = () => {
   return (
     <>
       <HeaderComponent />
@@ -14,6 +14,5 @@ function App() {
       <BodyComponent />
     </>
   );
-}
-
+};
 export default App;
