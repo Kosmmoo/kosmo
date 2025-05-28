@@ -1,8 +1,44 @@
+import {useEffect, useState} from 'react';
 import style from './BodyComponent.module.css';
+import {RepoComponent} from './RepoComponent';
+export type Repo = {
+  id: number;
+  name: string;
+  html_url: string;
+  owner: {
+    login: string;
+    id: number;
+    avatar_url: string;
+    url: string;
+    html_url: string;
+  };
+  description: string;
+  language: string;
+  stargazers_count: number;
+  created_at: string;
+  updated_at: string;
+};
 
 export const BodyComponent = () => {
+  const [repos, setRepos] = useState<Repo[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/Kosmmoo/repos`)
+      .then((response) => response.json())
+      .then((data: Repo[]) => {
+        setRepos(data);
+      })
+      .catch((error) => {
+        console.error('Chyba při načítání repozitářů:', error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <body className={style.body}>
+    <>
       <div className={style.container}>
         <h2 className={style.title}>O mně</h2>
         <span className={style.text}>
@@ -16,7 +52,16 @@ export const BodyComponent = () => {
       <div className={style.container}>
         <h2 className={style.title}>Projekty</h2>
         <span className={style.text}>Zde jsou některé projekty, na kterých jsem pracoval:</span>
+        <div>
+          {loading ? (
+            <div className={style.spinnerContainer}>
+              <div className={style.spinner}></div>
+            </div>
+          ) : (
+            <RepoComponent repos={repos} />
+          )}
+        </div>
       </div>
-    </body>
+    </>
   );
 };
