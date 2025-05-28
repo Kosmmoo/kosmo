@@ -20,7 +20,17 @@
     box-shadow: #616161  5px 5px 10px;
     max-width: 600px;
     margin: 40px auto; 
+  background: var(--container-bg);
+  border: 3px solid var(--border);
+  box-shadow: 5px 5px 10px var(--shadow);
 }
+.title {
+  color: var(--primary);
+}
+.text {
+  color: var(--text-secondary);
+}
+
 
 .spinnerContainer {
   display: flex;
