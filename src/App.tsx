@@ -11,6 +11,7 @@ export const App = () => {
         <img src={profilovka} className="profilovka" alt="profilovka" />
         <h1>Kosmo</h1>
       </div>
+
       <BodyComponent />
     </>
   );

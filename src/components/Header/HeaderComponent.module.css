@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;          
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
   gap: 1rem;
 }
 .LogoContainer {
@@ -22,7 +22,7 @@
 }
 
 .logo {
-  width: 30px;               
-  height: 30px;
+  width: 25px;               
+  height: 25px;
   padding: 5px;
 }

@@ -1,19 +1,37 @@
-import Email from '../../assets/email-8-svgrepo-com.svg';
-import discordLogo from '../../assets/icons8-discord-30.svg';
-import logoGithub from '../../assets/icons8-github-24.svg';
+import {useState} from 'react';
+import discordLogo from '../../assets/discord.svg';
+import Email from '../../assets/email.svg';
+import logoGithub from '../../assets/github.svg';
+import Moon from '../../assets/moon-stars.svg';
+import Sun from '../../assets/sun.svg';
 import style from './HeaderComponent.module.css';
+
 export const HeaderComponent = () => {
+  const [dark, setDark] = useState(false);
+
+  const toggleTheme = () => {
+    setDark((d) => !d);
+    document.body.classList.toggle('dark');
+  };
+
   return (
     <header className={style.header}>
       <a href="https://discord.com/users/kosmo145" target="_blank" rel="noopener noreferrer">
-        <img src={discordLogo} className={style.logo} alt="discord" />
+        <img src={discordLogo} className={`${style.logo} theme-invert`} alt="discord" />
       </a>
       <a href="https://github.com/Kosmmoo" target="_blank" rel="noopener noreferrer">
-        <img src={logoGithub} className={style.logo} alt="github" />
+        <img src={logoGithub} className={`${style.logo} theme-invert`} alt="github" />
       </a>
       <a href="mailto:vaclav.pesek2@educanet.cz?subject=Z webu Kosmo" rel="noopener noreferrer">
-        <img src={Email} className={style.logo} alt="email" />
+        <img src={Email} className={`${style.logo} theme-invert`} alt="email" />
       </a>
+      <img
+        src={dark ? Moon : Sun}
+        className={`${style.logo} theme-invert`}
+        alt={dark ? 'světlý režim' : 'tmavý režim'}
+        onClick={toggleTheme}
+        title={dark ? 'Přepnout na světlý režim' : 'Přepnout na tmavý režim'}
+      />
     </header>
   );
 };
