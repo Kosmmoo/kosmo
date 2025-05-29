@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/profilovka.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kosmo</title>
+
+<head>
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark'
+    ) {
+      // document.documentElement.classList.add('dark');
+      document.documentElement.style.background = '#181a20';
+    } else {
+      // document.documentElement.classList.remove('dark');
+      document.documentElement.style.background = '#fff';
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/profilovka.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kosmo</title>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

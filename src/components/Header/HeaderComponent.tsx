@@ -7,11 +7,25 @@ import Sun from '../../assets/sun.svg';
 import style from './HeaderComponent.module.css';
 
 export const HeaderComponent = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    const isLocalTheme = localStorage.getItem('theme');
+    if (isLocalTheme && isLocalTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      return true;
+    }
+    if (isLocalTheme && isLocalTheme === 'light') {
+      document.documentElement.classList.add('light');
+      return false;
+    }
+    return false;
+  });
 
   const toggleTheme = () => {
-    setDark((d) => !d);
-    document.body.classList.toggle('dark');
+    setDark((previousValue) => {
+      localStorage.setItem('theme', previousValue ? 'light' : 'dark');
+      document.documentElement.classList.toggle('dark', !previousValue);
+      return !previousValue;
+    });
   };
 
   return (
