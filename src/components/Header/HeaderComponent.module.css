@@ -1,24 +1,8 @@
 .header {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;          
   justify-content: flex-end;
   align-items: baseline;
   gap: 1rem;
-}
-.LogoContainer {
-  display: flex;  
-  gap: 10px;
-  align-items: center;
-}
-
-.TitleAll {
-  flex: 1 1 200px;           
-  display: flex;
-  justify-content: left;   
-  align-items: center;
-  gap: 1rem;
-  min-width: 0;
 }
 
 .logo {
