@@ -8,7 +8,7 @@ export const App = () => {
     <>
       <HeaderComponent />
       <div className="profilovka-container">
-        <img src={profilovka} className="profilovka" alt="profilovka" />
+        <img src={profilovka} className="profilovka" alt="avatar" />
         <h1>Kosmo</h1>
       </div>
 
