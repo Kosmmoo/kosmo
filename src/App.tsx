@@ -7,8 +7,8 @@ export const App = () => {
   return (
     <>
       <HeaderComponent />
-      <div className="profilovka-container">
-        <img src={profilovka} className="profilovka" alt="avatar" />
+      <div className="profile-container">
+        <img src={profilovka} className="profile" alt="avatar" />
         <h1>Kosmo</h1>
       </div>
 
