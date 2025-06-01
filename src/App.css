@@ -1,20 +1,18 @@
-
-#root {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.profilovka {
+.profile {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin: 10px;
 }
 
-.profilovka-container {
+.profile-container {
   display: flex;
   justify-content: center;
   align-items: center;  
   gap: 10px;
 } 
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

@@ -1,51 +1,39 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  width: 100%;
-  color-scheme: light dark;
-  color: #000000;
-  background-color: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
   --background: #ffffff;
   --container-bg: #fff3cc;
   --primary: #000000;
   --text: #000000;
   --text-secondary: #333333;
   --border: #000000;
-  
-  
-}
-#root {
-  padding: 10px;
 }
 
-body.dark {
+:root.dark {
   --background: #181a20;
   --container-bg: #23262f;
   --primary: #ffffff;
   --text: #ffffff;
   --text-secondary: #e6e6e6;
-  --border: #33384d;
-  
+  --border: #6b6b6b;
+}
+
+#root {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 }
 
 body {
   background: var(--background);
   color: var(--text);
-  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+  margin: auto;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-body.dark img.theme-invert{
+html.dark img.theme-invert {
   filter: invert(1) brightness(1.2) contrast(1.1) !important;
   transition: filter 0.2s;
 }
